@@ -5,6 +5,8 @@ import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
+
+
 @Component({
   selector: 'app-album-detail',
   templateUrl: './album-detail.component.html',
@@ -14,7 +16,6 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class AlbumDetailComponent implements OnInit {
   albumId: string;
   albumToDisplay;
-
   constructor(private route: ActivatedRoute, private location: Location, private albumService: AlbumService) { }
 
   ngOnInit() {
@@ -23,5 +24,4 @@ export class AlbumDetailComponent implements OnInit {
    });
    this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
   }
-
 }
