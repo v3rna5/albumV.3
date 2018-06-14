@@ -20,8 +20,7 @@ export const firebaseConfig = {
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
 }
-
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
